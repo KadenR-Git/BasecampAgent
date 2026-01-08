@@ -18,7 +18,7 @@ Basecamp operates as a two-tier hierarchy to balance speed (inference) with dept
 
 **2. The Heavy Agent / Summarizer (Deep Thinking)**
 - Hardware: AMD Strix Halo (8060S iGPU) via 128GB Unified Memory.
-- Role: Handles "Deep Research" (long-chain reasoning) and recursive memory summarization.
+- Role: Handles "Deep Research" (long-chain reasoning).
 
 # Technical Features
 - Hardware-Locked Tooling: A mutex-based locking system ensures that heavy tasks do not collide or crash the iGPU.
