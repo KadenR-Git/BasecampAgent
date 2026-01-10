@@ -1,13 +1,15 @@
 # BasecampAgent Overview
 BasecampAgent is a hybrid, local-first agentic AI system designed to maximize performance by dynamically offloading tasks between disparate hardware units.
 
-Unlike traditional agent frameworks that rely on cloud APIs or heavy abstractions, Basecamp is built to run entirely on-device, leveraging the unique strengths of the AMD Strix Halo APU and RDNA 4 eGPU architectures. It features a custom "Infinite Context" memory management system to maintain high performance within strict VRAM constraints.
+Unlike traditional agent frameworks that rely on cloud APIs or heavy abstractions, Basecamp is built to run entirely on-device, leveraging the unique strengths of the AMD Strix Halo APU and RDNA 4 GPU architectures.
 
 # No-Framework Agency
 Basecamp is built on raw Python and llama.cpp (via llama-cli). By avoiding frameworks like Langchain or CrewAI, the system achieves:
 - Minimal Latency: No middle-man abstractions between the orchestrator and the LLM.
 - Hardware Transparency: Direct control over which model runs on which silicon.
 - Privacy: 100% local inference with zero external API calls.
+
+  While using a framework such as Langchain would've streamlined development, it also drastically increased TTFT latency, which was misaligned with initial development goals.
 
 # System Architecture
 Basecamp operates as a two-tier hierarchy to balance speed (inference) with depth (reasoning).
@@ -43,7 +45,7 @@ Basecamp operates as a two-tier hierarchy to balance speed (inference) with dept
 
  -Recursive Memory Management: Automatically slices and summarizes conversation history using the Strix Halo to keep the Orchestrator lean.
  -Vocal Integrations: Allowing the system to communicate through a voice-first system, rather than a CLI.
-
+ 
  # NOTE:
   This page does not walk you through the installation or usage of the system. 
   Additionally, while I may make occasional updates to the system, I intend to pivot towards a Langchain/Deepagents based system for convinience and ease-of-use.
